@@ -85,7 +85,10 @@ namespace HitboxDashboard
                 GetEditors(Username);
                 return;
             }
-            if (editorCheck.Checked && isEditor)
+            if (editorDropDown.SelectedIndex > -1)
+            {
+                editorCheck.Checked = false;
+            } else if (editorCheck.Checked && isEditor && editorDropDown.SelectedIndex > -1)
             {
                 Channel = editorDropDown.Text;
             }
